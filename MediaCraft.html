@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediaCraft - Your Digital Command Center</title>
+  <style>
+    :root {
+      --main-color: #2a2e4a;
+      --accent-color: #ff6f61;
+      --text-color: #333;
+      --bg-color: #f7f7f7;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background: var(--main-color);
+      color: var(--white);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: var(--accent-color);
+      color: var(--white);
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #ff5249;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: var(--main-color);
+    }
+
+    .how-it-works {
+      display: grid;
+      gap: 30px;
+    }
+
+    .how-step {
+      background: var(--white);
+      padding: 20px;
+      border-left: 5px solid var(--accent-color);
+      border-radius: 4px;
+    }
+
+    footer {
+      background: var(--main-color);
+      color: var(--white);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .services-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MediaCraft</h1>
+    <p>Your Digital Command Center for Creative Excellence</p>
+    <a href="#contact" class="cta-btn">Start Your Project</a>
+  </header>
+
+  <section class="section">
+    <h2>What is MediaCraft?</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+      MediaCraft is a creative services agency that connects clients to top-tier professionals across multiple digital domains. 
+      Unlike freelancer marketplaces, we manage the entire workflow—from onboarding to delivery—ensuring high-quality outcomes without hassle.
+    </p>
+  </section>
+
+  <section class="section" style="background-color: #fff;">
+    <h2>Our Services</h2>
+    <div class="services-list">
+      <div class="service-card">
+        <h3>✅ Web & App Development</h3>
+        <p>Custom websites, apps, and platforms built by expert developers.</p>
+      </div>
+      <div class="service-card">
+        <h3>✅ Graphic & Brand Design</h3>
+        <p>Logos, branding, and visual assets crafted to make an impact.</p>
+      </div>
+      <div class="service-card">
+        <h3>✅ Music & Audio Editing</h3>
+        <p>High-quality music production and sound engineering.</p>
+      </div>
+      <div class="service-card">
+        <h3>✅ Digital Marketing</h3>
+        <p>Targeted strategies for growth, visibility, and engagement.</p>
+      </div>
+      <div class="service-card">
+        <h3>✅ Content & Copywriting</h3>
+        <p>Compelling writing that speaks to your audience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>How It Works</h2>
+    <div class="how-it-works">
+      <div class="how-step">
+        <strong>1. Onboard</strong> – We gather your goals, requirements, and vision.
+      </div>
+      <div class="how-step">
+        <strong>2. Assign</strong> – We select the perfect professional from our network.
+      </div>
+      <div class="how-step">
+        <strong>3. Manage & Review</strong> – We oversee project execution and quality control.
+      </div>
+      <div class="how-step">
+        <strong>4. Deliver</strong> – You receive polished, high-quality deliverables.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" style="text-align: center;">
+    <h2>Ready to Begin?</h2>
+    <p>Get in touch and let’s bring your vision to life with MediaCraft.</p>
+    <a href="mailto:hello@mediacraft.io" class="cta-btn">Contact Us</a>
+  </section>
+
+  <footer>
+    &copy; 2025 MediaCraft. All rights reserved.
+  </footer>
+
+</body>
+</html>
