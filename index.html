@@ -3,14 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="MediaCraft is your digital command center—a creative agency connecting you with top professionals in web, design, marketing, audio, and more." />
   <title>MediaCraft - Your Digital Command Center</title>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
   <style>
     :root {
       --main-color: #2a2e4a;
       --accent-color: #ff6f61;
-      --text-color: #333;
-      --bg-color: #f7f7f7;
-      --white: #fff;
+      --text-color: #222;
+      --bg-color: #f4f4f4;
+      --card-bg: #ffffff;
+    }
+
+    [data-theme="dark"] {
+      --main-color: #1a1b26;
+      --accent-color: #ff6f61;
+      --text-color: #eee;
+      --bg-color: #121212;
+      --card-bg: #1e1e1e;
     }
 
     * {
@@ -19,34 +32,55 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       line-height: 1.6;
       background: var(--bg-color);
       color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
     }
 
     header {
       background: var(--main-color);
-      color: var(--white);
+      color: var(--text-color);
       padding: 60px 20px;
       text-align: center;
+      position: relative;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
     }
 
     header h1 {
       font-size: 2.5rem;
+      color: white;
     }
 
     header p {
       font-size: 1.2rem;
       margin-top: 10px;
+      color: #ddd;
     }
 
     .cta-btn {
       display: inline-block;
       margin-top: 20px;
       background: var(--accent-color);
-      color: var(--white);
+      color: white;
       padding: 12px 24px;
       border: none;
       border-radius: 5px;
@@ -79,11 +113,12 @@
     }
 
     .service-card {
-      background: var(--white);
+      background: var(--card-bg);
       padding: 20px;
       border-radius: 8px;
       width: 300px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      transition: background 0.3s;
     }
 
     .service-card h3 {
@@ -93,11 +128,12 @@
 
     .how-it-works {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
 
     .how-step {
-      background: var(--white);
+      background: var(--card-bg);
       padding: 20px;
       border-left: 5px solid var(--accent-color);
       border-radius: 4px;
@@ -105,7 +141,7 @@
 
     footer {
       background: var(--main-color);
-      color: var(--white);
+      color: white;
       text-align: center;
       padding: 30px 20px;
       font-size: 0.9rem;
@@ -119,15 +155,16 @@
     }
   </style>
 </head>
-<body>
+<body data-theme="light">
 
   <header>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
     <h1>MediaCraft</h1>
     <p>Your Digital Command Center for Creative Excellence</p>
     <a href="#contact" class="cta-btn">Start Your Project</a>
   </header>
 
-  <section class="section">
+  <section class="section" data-aos="fade-up">
     <h2>What is MediaCraft?</h2>
     <p style="max-width: 800px; margin: auto; text-align: center;">
       MediaCraft is a creative services agency that connects clients to top-tier professionals across multiple digital domains. 
@@ -135,61 +172,82 @@
     </p>
   </section>
 
-  <section class="section" style="background-color: #fff;">
+  <section class="section" style="background-color: var(--card-bg);" data-aos="fade-in">
     <h2>Our Services</h2>
     <div class="services-list">
-      <div class="service-card">
+      <div class="service-card" data-aos="zoom-in">
         <h3>✅ Web & App Development</h3>
         <p>Custom websites, apps, and platforms built by expert developers.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
         <h3>✅ Graphic & Brand Design</h3>
         <p>Logos, branding, and visual assets crafted to make an impact.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
         <h3>✅ Music & Audio Editing</h3>
         <p>High-quality music production and sound engineering.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
         <h3>✅ Digital Marketing</h3>
         <p>Targeted strategies for growth, visibility, and engagement.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
         <h3>✅ Content & Copywriting</h3>
         <p>Compelling writing that speaks to your audience.</p>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" data-aos="fade-up">
     <h2>How It Works</h2>
     <div class="how-it-works">
-      <div class="how-step">
+      <div class="how-step" data-aos="slide-up">
         <strong>1. Onboard</strong> – We gather your goals, requirements, and vision.
       </div>
-      <div class="how-step">
+      <div class="how-step" data-aos="slide-up" data-aos-delay="100">
         <strong>2. Assign</strong> – We select the perfect professional from our network.
       </div>
-      <div class="how-step">
+      <div class="how-step" data-aos="slide-up" data-aos-delay="200">
         <strong>3. Manage & Review</strong> – We oversee project execution and quality control.
       </div>
-      <div class="how-step">
+      <div class="how-step" data-aos="slide-up" data-aos-delay="300">
         <strong>4. Deliver</strong> – You receive polished, high-quality deliverables.
       </div>
     </div>
   </section>
 
-  <section class="section" id="contact" style="text-align: center;">
-  <h2>Ready to Begin?</h2>
-  <p>Get in touch and let’s bring your vision to life with MediaCraft.</p>
-  <a href="https://wa.me/233540281796" class="cta-btn" target="_blank" rel="noopener noreferrer">
-    Contact Us
-  </a>
-</section>
+  <section class="section" id="contact" style="text-align: center;" data-aos="fade-in">
+    <h2>Ready to Begin?</h2>
+    <p>Get in touch and let’s bring your vision to life with MediaCraft.</p>
+    <a href="https://wa.me/233540281796" class="cta-btn" target="_blank" rel="noopener noreferrer">
+      Contact Us
+    </a>
+  </section>
 
   <footer>
     &copy; 2025 MediaCraft. All rights reserved.
   </footer>
+
+  <!-- AOS Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleTheme() {
+      const current = document.body.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      document.body.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    }
+
+    // Load stored theme
+    (function () {
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        document.body.setAttribute("data-theme", saved);
+      }
+    })();
+  </script>
 
 </body>
 </html>
