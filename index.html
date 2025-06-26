@@ -233,12 +233,10 @@
   <script>
     AOS.init();
 
-    function toggleTheme() {
-      const current = document.body.getAttribute("data-theme");
-      const next = current === "dark" ? "light" : "dark";
-      document.body.setAttribute("data-theme", next);
-      localStorage.setItem("theme", next);
-    }
+    <!-- Theme Toggle with SVG -->
+<button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" aria-label="Toggle Dark Mode">
+  <!-- Icons are swapped via JS -->
+</button>
 
     // Load stored theme
     (function () {
